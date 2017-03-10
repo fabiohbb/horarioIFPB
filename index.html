@@ -17,9 +17,11 @@ layout: default
       <button onclick="myFunction('myDropdownTurma')" class="dropbtn">Procurar</button>
       <div id="myDropdownTurma" class="dropdown-content">
           <input type="text" placeholder="Search.." id="myInputTurma" onkeyup="filterFunction('myInputTurma','myDropdownTurma')">
-          {% for turma in site.data.turma.turmas %}
-              <a href="#{{turma}}">{{turma}}</a>
-          {% endfor %}
+          <div style="height:300px">
+              {% for turma in site.data.turma.turmas %}
+                  <a href="#{{turma}}">{{turma}}</a>
+              {% endfor %}
+          </div>
       </div>
       {% for curso in site.data.horarios.cursos %}
           <h1 align="center">{{curso.nome}}</h1>
@@ -37,7 +39,7 @@ layout: default
                         <td class="hora">{{linha.horario}}</td>
                         {% for aula in linha.aulas %}
                               {% if aula.displicina == "INTERVALO" or aula.displicina == "ALMOÇO" or aula.displicina == "JANTAR" %}
-                                  <td colspan="5" class="aula">{{aula.disciplina}}<br>{{aula.professor}}</td>
+                                  <td colspan="5" class="aula">{{aula.disciplina}}</td>
                                   {% break %}
                               {% else %}
                                   <td class="aula">{{aula.disciplina}}<br>{{aula.professor}}</td>
@@ -57,9 +59,11 @@ layout: default
       <button onclick="myFunction('myDropdownProfessor')" class="dropbtn">Procurar</button>
       <div id="myDropdownProfessor" class="dropdown-content">
           <input type="text" placeholder="Search.." id="myInputProfessor" onkeyup="filterFunction('myInputProfessor','myDropdownProfessor')">
-          {% for professor in site.data.professor.professores %}
-              <a href="#{{professor}}">{{professor}}</a>
-          {% endfor %}
+          <div style="height:300px">
+              {% for professor in site.data.professor.professores %}
+                  <a href="#{{professor}}">{{professor}}</a>
+              {% endfor %}
+          </div>
       </div>
       {% for professor in site.data.horarios.professores %}
           <div id="{{professor.nome}}">
@@ -75,7 +79,7 @@ layout: default
                   <td class="hora">{{linha.horario}}</td>
                   {% for aula in linha.aulas %}
                         {% if aula.displicina == "INTERVALO" or aula.displicina == "ALMOÇO" or aula.displicina == "JANTAR" %}
-                            <td colspan="5" class="aula">{{aula.disciplina}}<br>{{aula.turma}}</td>
+                            <td colspan="5" class="aula">{{aula.disciplina}}</td>
                             {% break %}
                         {% else %}
                             <td class="aula">{{aula.disciplina}}<br>{{aula.turma}}</td>
