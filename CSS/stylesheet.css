@@ -40,14 +40,15 @@ body {
 }
 
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #2F4F4F;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    width: 150px;
-    margin-top: 5px;
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 5px; 
 }
 
 .dropbtn:hover, .dropbtn:focus {
