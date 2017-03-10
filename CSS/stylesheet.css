@@ -32,7 +32,6 @@ body {
 }
 
 #grad1 {
-    height: 200px;
     background: green; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(green, #98FB98); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(green, #98FB98); /* For Opera 11.1 to 12.0 */
