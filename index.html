@@ -21,10 +21,10 @@ layout: default
           </div>
       </div>
       {% for curso in site.data.horarios.cursos %}
-          <h1 align="center">{{curso.nome}}</h1>
+          <h1 class="block-white" align="center">{{curso.nome}}</h1>
           {% for turma in curso.turmas %}
             <div id="{{turma.nome}}">
-              <h2>{{turma.nome}}</h2>
+              <h2 class="block-white">{{turma.nome}}</h2>
               <table class="w3-table w3-striped w3-table-all">
                 <tr class="w3-green">
                   {% for coluna in turma.colunas %}
@@ -36,10 +36,10 @@ layout: default
                         <td class="hora">{{linha.horario}}</td>
                         {% for aula in linha.aulas %}
                               {% if aula.displicina == "INTERVALO" or aula.displicina == "ALMOÇO" or aula.displicina == "JANTAR" %}
-                                  <td colspan="5" class="aula">{{aula.disciplina}}</td>
+                                  <td colspan="5">{{aula.disciplina}}</td>
                                   {% break %}
                               {% else %}
-                                  <td class="aula">{{aula.disciplina}}<br>{{aula.professor}}</td>
+                                  <td>{{aula.disciplina}}<br>{{aula.professor}}</td>
                               {% endif %}
                         {% endfor %}
                       </tr>
@@ -63,8 +63,8 @@ layout: default
           </div>
       </div>
       {% for professor in site.data.horarios.professores %}
-          <div id="{{professor.nome}}">
-            <h2>{{professor.nome}}</h2>
+          <center id="{{professor.nome}}">
+            <h2 class="block-white">{{professor.nome}}</h2>
             <table class="w3-table w3-striped w3-table-all">
             <tr class="w3-green">
             {% for coluna in professor.colunas %}
@@ -76,10 +76,10 @@ layout: default
                   <td class="hora">{{linha.horario}}</td>
                   {% for aula in linha.aulas %}
                         {% if aula.displicina == "INTERVALO" or aula.displicina == "ALMOÇO" or aula.displicina == "JANTAR" %}
-                            <td colspan="5" class="aula">{{aula.disciplina}}</td>
+                            <td colspan="5">{{aula.disciplina}}</td>
                             {% break %}
                         {% else %}
-                            <td class="aula">{{aula.disciplina}}<br>{{aula.turma}}</td>
+                            <td>{{aula.disciplina}}<br>{{aula.turma}}</td>
                         {% endif %}
                   {% endfor %}
                 </tr>
