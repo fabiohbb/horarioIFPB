@@ -23,7 +23,7 @@ layout: default
       {% for curso in site.data.horarios.cursos %}
           <h1 class="block-white" align="center">{{curso.nome}}</h1>
           {% for turma in curso.turmas %}
-            <div id="{{turma.nome}}">
+            <center id="{{turma.nome}}">
               <h2 class="block-white">{{turma.nome}}</h2>
               <table class="w3-table w3-striped w3-table-all">
                 <tr class="w3-green">
@@ -45,7 +45,7 @@ layout: default
                       </tr>
                   {% endfor%}
                </table>
-              </div>
+              </center>
           {% endfor %}
       {% endfor %}
     </div>
@@ -85,7 +85,7 @@ layout: default
                 </tr>
               {% endfor%}
               </table>
-            </div>
+            </center>
       {% endfor %}
     </div>
   </div>
