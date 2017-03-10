@@ -21,7 +21,9 @@ layout: default
           </div>
       </div>
       {% for curso in site.data.horarios.cursos %}
-          <h1 class="block-white" align="center">{{curso.nome}}</h1>
+          <center>
+            <h1 class="block-white" align="center">{{curso.nome}}</h1>
+           </center>
           {% for turma in curso.turmas %}
             <center id="{{turma.nome}}">
               <h2 class="block-white">{{turma.nome}}</h2>
@@ -35,7 +37,7 @@ layout: default
                       <tr>
                         <td class="hora">{{linha.horario}}</td>
                         {% for aula in linha.aulas %}
-                              {% if aula.displicina == "INTERVALO" or aula.displicina == "ALMOÇO" or aula.displicina == "JANTAR" %}
+                              {% if aula.disciplina == "INTERVALO" or aula.disciplina == "JANTAR" or aula.disciplina == "ALMOÇO" %}
                                   <td colspan="5">{{aula.disciplina}}</td>
                                   {% break %}
                               {% else %}
@@ -75,7 +77,7 @@ layout: default
                 <tr>
                   <td class="hora">{{linha.horario}}</td>
                   {% for aula in linha.aulas %}
-                        {% if aula.displicina == "INTERVALO" or aula.displicina == "ALMOÇO" or aula.displicina == "JANTAR" %}
+                        {% if aula.disciplina == "INTERVALO" or aula.disciplina == "JANTAR" or aula.disciplina == "ALMOÇO" %}
                             <td colspan="5">{{aula.disciplina}}</td>
                             {% break %}
                         {% else %}
