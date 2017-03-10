@@ -1,13 +1,10 @@
-h1 {
-  color: white;
-}
 .hora {
   color: black;
   background-color: #D3D3D3;
 }
-.aula {
-  color: black;
-  background-color: white;
+.block-white{
+  background-color:white;
+  width:50%;
 }
 
 body {
